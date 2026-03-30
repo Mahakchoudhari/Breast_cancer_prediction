@@ -1,89 +1,121 @@
-# Breast Cancer Prediction using Logistic Regression
+# 🎗️ Breast Cancer Prediction
 
-##  Overview
-
-This project predicts whether a tumor is **benign** or **malignant** using Logistic Regression based on medical cell features.
-
-##  Objective
-
-To build a machine learning model that helps classify breast cancer cases for early detection.
-
-## Dataset
-
-The dataset consists of several cell-related features:
-
-* Sample Code Number
-* Clump Thickness
-* Uniformity of Cell Size
-* Uniformity of Cell Shape
-* Marginal Adhesion
-* Single Epithelial Cell Size
-* Bare Nuclei
-* Bland Chromatin
-* Normal Nucleoli
-* Mitoses
-
-###  Target Variable
-
-* `2` → Benign (Non-cancerous)
-* `4` → Malignant (Cancerous)
-
-##  Technologies Used
-
-* Python
-* NumPy
-* Pandas
-* Scikit-learn
-* Jupyter
-
-## Model Used
-
-* Logistic Regression
-
-## 🔄 Workflow
-
-1. Data loading and cleaning
-2. Feature scaling
-3. Splitting dataset into training and testing sets
-4. Training Logistic Regression model
-5. Prediction and evaluation
-
-## Example Input
-
-```
-Clump Thickness: 5  
-Uniformity of Cell Size: 1  
-Uniformity of Cell Shape: 1  
-Marginal Adhesion: 1  
-Single Epithelial Cell Size: 2  
-Bare Nuclei: 1  
-Bland Chromatin: 3  
-Normal Nucleoli: 1  
-Mitoses: 1  
-```
-
-###  Prediction Output
-
-The model will classify the tumor as either:
-
-* `2` (Benign) or
-* `4` (Malignant)
-
-##  Evaluation Metrics
-
-* Confusion Matrix
-* Accuracy Score
-
-## Future Improvements
-
-* Use advanced models like Random Forest or SVM
-* Perform feature selection
-* Hyperparameter tuning
-
-##  Conclusion
-
-This project demonstrates how Logistic Regression can be used in healthcare to classify tumors and support early breast cancer diagnosis.
+A Machine Learning web application that predicts whether a tumor is **Benign or Malignant** based on patient data.
 
 ---
 
-*Simple yet powerful classification model for real-world healthcare problems.*
+## 📌 Project Overview
+
+Breast cancer is one of the most common cancers worldwide. Early detection can significantly improve survival rates. This project uses Machine Learning classification algorithms to predict breast cancer based on tumor characteristics.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** Python
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+- **Deployment:** Streamlit
+
+---
+
+## 📊 Dataset
+
+- **Name:** Breast Cancer Wisconsin Dataset
+- **Source:** UCI Machine Learning Repository
+- **Samples:** 699
+- **Features:** 9 (Clump Thickness, Uniformity of Cell Size, Uniformity of Cell Shape, etc.)
+- **Target:** Class (2 = Benign, 4 = Malignant)
+
+---
+
+## 🔍 Project Structure
+
+```
+Breast_cancer_prediction/
+│
+├── breast_cancer.csv        ← Dataset
+├── breast_cancer.ipynb      ← Jupyter Notebook
+├── app.py                   ← Streamlit App
+├── model.pkl                ← Saved Model
+├── scaler.pkl               ← Saved Scaler
+├── requirements.txt         ← Requirements  
+└── README.md
+
+```
+
+---
+
+## 📈 Steps Followed
+
+1. **Data Preprocessing** — Removed unnecessary columns, handled missing values
+2. **EDA & Visualizations** — Countplot, Correlation Heatmap, Feature Distribution Histplot , Boxplot
+3. **Train Test Split** — 80/20 split
+4. **Feature Scaling** — StandardScaler
+5. **Model Training** — Random Forest Classification
+6. **Evaluation** — Confusion Matrix, Accuracy Score, Cross Validation
+7. **Model Comparison** — Logistic Regression, Random Forest, SVM, KNN, Decision Tree
+8. **Deployment** — Streamlit Web App
+
+---
+
+## ✅ Model Performance
+
+| Metric | Score |
+|--------|-------|
+| Test Accuracy | 97.08% |
+| Cross Validation Accuracy | 96.70% |
+| Standard Deviation | 2.58% |
+
+---
+
+## 🤖 Models Compared
+
+| Model | Accuracy |
+|-------|----------|
+| Logistic Regression | 95.62% |
+| Random Forest | 97.08% |
+| SVM | 95.62% |
+| KNN | 95.62% |
+| Decision Tree | 94.16% |
+
+---
+
+## 🚀 How to Run
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/Mahakchoudhari/Breast_cancer_prediction.git
+cd Breast_cancer_prediction
+```
+
+**2. Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+**3. Run Streamlit App**
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📦 Requirements
+
+```
+streamlit
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+```
+
+---
+
+## 👩‍💻 Author
+
+**Mahak Choudhari**  
+B.Tech — Artificial Intelligence & Machine Learning (2nd Year)  
+[GitHub](https://github.com/Mahakchoudhari)
+
