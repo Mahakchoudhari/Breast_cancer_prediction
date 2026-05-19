@@ -109,6 +109,7 @@ pandas
 numpy
 matplotlib
 seaborn
+jupyter notebook
 ```
 
 ---
